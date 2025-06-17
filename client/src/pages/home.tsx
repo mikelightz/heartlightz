@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -112,39 +112,42 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 space-y-4 border-t border-border pt-4"
-          >
-            <button
-              onClick={() => scrollToSection("about")}
-              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="md:hidden mt-4 space-y-4 border-t border-border pt-4 overflow-hidden"
             >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("work")}
-              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
-            >
-              Work
-            </button>
-            <button
-              onClick={() => scrollToSection("movement")}
-              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
-            >
-              Movement
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
-            >
-              Contact
-            </button>
-          </motion.div>
-        )}
+              <button
+                onClick={() => scrollToSection("about")}
+                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection("work")}
+                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+              >
+                Work
+              </button>
+              <button
+                onClick={() => scrollToSection("movement")}
+                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+              >
+                Movement
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+              >
+                Contact
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
