@@ -10,10 +10,30 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { Heart, Palette, Flame, Video, Globe, Users, Instagram, Youtube, ChevronDown, Menu, X, ExternalLink, Play } from "lucide-react";
+import {
+  Heart,
+  Palette,
+  Flame,
+  Video,
+  Globe,
+  Users,
+  Instagram,
+  Youtube,
+  ChevronDown,
+  Menu,
+  X,
+  ExternalLink,
+  Play,
+} from "lucide-react";
 import { FaTiktok, FaPatreon } from "react-icons/fa";
 
-const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
+const AnimatedSection = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -40,7 +60,7 @@ const Navigation = () => {
       const elementPosition = element.offsetTop;
       window.scrollTo({
         top: elementPosition - offset,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
     setIsOpen(false);
@@ -50,26 +70,40 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="font-playfair text-2xl font-bold text-primary">HeArt Lightz</div>
-          
+          <div className="font-playfair text-2xl font-bold text-primary">
+            HeArt Lightz
+          </div>
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('about')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+            >
               About
             </button>
-            <button onClick={() => scrollToSection('work')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("work")}
+              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+            >
               Work
             </button>
-            <button onClick={() => scrollToSection('movement')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("movement")}
+              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+            >
               Movement
             </button>
-            <button onClick={() => scrollToSection('contact')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+            >
               Contact
             </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-primary"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -85,16 +119,28 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden mt-4 space-y-4 border-t border-border pt-4"
           >
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+            >
               About
             </button>
-            <button onClick={() => scrollToSection('work')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("work")}
+              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+            >
               Work
             </button>
-            <button onClick={() => scrollToSection('movement')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("movement")}
+              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+            >
               Movement
             </button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+            >
               Contact
             </button>
           </motion.div>
@@ -109,7 +155,7 @@ const HeroSection = () => {
     <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -117,31 +163,41 @@ const HeroSection = () => {
         >
           HeArt Lightz
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-secondary mb-8 font-light"
         >
-          Media for dreamers. Stories for a new way of living.
+          Media for seekers. Stories for a new way of living.
         </motion.p>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="space-y-4 md:space-y-0 md:space-x-6 md:flex justify-center"
         >
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full md:w-auto">
-            Watch the Journey
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full md:w-auto"
+            asChild
+          >
+            <a href="https://www.youtube.com/channel/UCy8iKnUUfg3cYQhH07ambug" target="_blank" rel="noopener noreferrer">
+              Watch the Journey
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="border-2 border-white text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full md:w-auto">
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-2 border-white text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full md:w-auto"
+          >
             Start Here
           </Button>
         </motion.div>
       </div>
-      
+
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
@@ -163,18 +219,21 @@ const AboutSection = () => {
     {
       icon: <Heart className="h-8 w-8 text-white" />,
       title: "Connection",
-      description: "Building bridges between hearts, cultures, and communities through authentic storytelling."
+      description:
+        "Building bridges between hearts, cultures, and communities through authentic storytelling.",
     },
     {
       icon: <Palette className="h-8 w-8 text-white" />,
       title: "Creativity",
-      description: "Pushing boundaries and exploring new ways to express truth, beauty, and human experience."
+      description:
+        "Pushing boundaries and exploring new ways to express truth, beauty, and human experience.",
     },
     {
       icon: <Flame className="h-8 w-8 text-white" />,
       title: "Rebellion with Heart",
-      description: "Challenging norms not with anger, but with love, hope, and a vision for something better."
-    }
+      description:
+        "Challenging norms not with anger, but with love, hope, and a vision for something better.",
+    },
   ];
 
   return (
@@ -186,7 +245,8 @@ const AboutSection = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
-            We create bold, heart-led media that challenges the status quo and lights the way toward a more connected, inspired future.
+            We create bold, heart-led media that challenges the status quo and
+            lights the way toward a more connected, inspired future.
           </p>
         </AnimatedSection>
 
@@ -198,8 +258,12 @@ const AboutSection = () => {
                   <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                     {value.icon}
                   </div>
-                  <h3 className="font-playfair text-2xl font-semibold text-foreground mb-4">{value.title}</h3>
-                  <p className="text-muted-foreground flex-grow">{value.description}</p>
+                  <h3 className="font-playfair text-2xl font-semibold text-foreground mb-4">
+                    {value.title}
+                  </h3>
+                  <p className="text-muted-foreground flex-grow">
+                    {value.description}
+                  </p>
                 </CardContent>
               </Card>
             </AnimatedSection>
@@ -232,13 +296,13 @@ const FeaturedWorkSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-              <img 
-                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=675" 
-                alt="Film production setup with camera equipment" 
-                className="w-full h-auto transition-transform duration-300 group-hover:scale-105" 
+              <img
+                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=675"
+                alt="Film production setup with camera equipment"
+                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
               />
-              
-              <div 
+
+              <div
                 className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer hover:bg-black/50 transition-colors duration-300"
                 onClick={() => setIsVideoPlaying(true)}
               >
@@ -258,9 +322,11 @@ const FeaturedWorkSection = () => {
               From the U.S. to Brazil
             </h3>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Documenting the beauty of living differently. This journey explores alternative ways of being, connection, and community across cultures and continents.
+              Documenting the beauty of living differently. This journey
+              explores alternative ways of being, connection, and community
+              across cultures and continents.
             </p>
-            
+
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
                 <Video className="h-5 w-5 text-primary mr-3" />
@@ -268,7 +334,9 @@ const FeaturedWorkSection = () => {
               </div>
               <div className="flex items-center">
                 <Globe className="h-5 w-5 text-primary mr-3" />
-                <span className="text-foreground">International Production</span>
+                <span className="text-foreground">
+                  International Production
+                </span>
               </div>
               <div className="flex items-center">
                 <Users className="h-5 w-5 text-primary mr-3" />
@@ -327,7 +395,8 @@ const JoinMovementSection = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-foreground max-w-2xl mx-auto">
-            Be part of a community creating media that matters. Support independent storytelling that challenges and inspires.
+            Be part of a community creating media that matters. Support
+            independent storytelling that challenges and inspires.
           </p>
         </AnimatedSection>
 
@@ -339,24 +408,27 @@ const JoinMovementSection = () => {
                   Stay Connected
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Get behind-the-scenes content, early access to new projects, and insights into our creative process.
+                  Get behind-the-scenes content, early access to new projects,
+                  and insights into our creative process.
                 </p>
-                
+
                 <form onSubmit={handleNewsletterSubmit} className="space-y-4">
-                  <Input 
-                    type="email" 
-                    placeholder="Your email address" 
+                  <Input
+                    type="email"
+                    placeholder="Your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="bg-card border-border"
                   />
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                     disabled={newsletterMutation.isPending}
                   >
-                    {newsletterMutation.isPending ? "Subscribing..." : "Subscribe to Updates"}
+                    {newsletterMutation.isPending
+                      ? "Subscribing..."
+                      : "Subscribe to Updates"}
                   </Button>
                 </form>
               </CardContent>
@@ -370,11 +442,15 @@ const JoinMovementSection = () => {
                   Support the Vision
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Help us create more independent content that challenges the status quo and inspires new ways of living.
+                  Help us create more independent content that challenges the
+                  status quo and inspires new ways of living.
                 </p>
 
                 <div className="space-y-4 mb-6">
-                  <a href="#" className="flex items-center justify-between bg-card p-4 rounded-lg hover:shadow-md transition-shadow duration-300 underline-glow">
+                  <a
+                    href="#"
+                    className="flex items-center justify-between bg-card p-4 rounded-lg hover:shadow-md transition-shadow duration-300 underline-glow"
+                  >
                     <div className="flex items-center">
                       <FaPatreon className="text-primary text-xl mr-3" />
                       <span className="font-medium">Support on Patreon</span>
@@ -384,13 +460,22 @@ const JoinMovementSection = () => {
                 </div>
 
                 <div className="flex space-x-4">
-                  <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors duration-300">
+                  <a
+                    href="#"
+                    className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors duration-300"
+                  >
                     <Instagram className="h-5 w-5" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors duration-300">
+                  <a
+                    href="#"
+                    className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors duration-300"
+                  >
                     <FaTiktok className="h-5 w-5" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors duration-300">
+                  <a
+                    href="https://www.youtube.com/channel/UCy8iKnUUfg3cYQhH07ambug"
+                    className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors duration-300"
+                  >
                     <Youtube className="h-5 w-5" />
                   </a>
                 </div>
@@ -407,7 +492,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
   const { toast } = useToast();
 
@@ -426,7 +511,8 @@ const ContactSection = () => {
     onError: (error: any) => {
       toast({
         title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
+        description:
+          error.message || "Failed to send message. Please try again.",
         variant: "destructive",
       });
     },
@@ -437,10 +523,12 @@ const ContactSection = () => {
     contactMutation.mutate(formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -463,47 +551,62 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="name" className="text-foreground font-medium mb-2 block">Name</Label>
-                    <Input 
-                      type="text" 
-                      id="name" 
-                      name="name" 
+                    <Label
+                      htmlFor="name"
+                      className="text-foreground font-medium mb-2 block"
+                    >
+                      Name
+                    </Label>
+                    <Input
+                      type="text"
+                      id="name"
+                      name="name"
                       value={formData.name}
                       onChange={handleChange}
                       className="bg-background border-border"
-                      required 
+                      required
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-foreground font-medium mb-2 block">Email</Label>
-                    <Input 
-                      type="email" 
-                      id="email" 
-                      name="email" 
+                    <Label
+                      htmlFor="email"
+                      className="text-foreground font-medium mb-2 block"
+                    >
+                      Email
+                    </Label>
+                    <Input
+                      type="email"
+                      id="email"
+                      name="email"
                       value={formData.email}
                       onChange={handleChange}
                       className="bg-background border-border"
-                      required 
+                      required
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <Label htmlFor="message" className="text-foreground font-medium mb-2 block">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    name="message" 
-                    rows={6} 
+                  <Label
+                    htmlFor="message"
+                    className="text-foreground font-medium mb-2 block"
+                  >
+                    Message
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="bg-background border-border resize-none" 
-                    placeholder="Tell us about your project or collaboration idea..." 
-                    required 
+                    className="bg-background border-border resize-none"
+                    placeholder="Tell us about your project or collaboration idea..."
+                    required
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-lg font-semibold"
                   disabled={contactMutation.isPending}
                 >
@@ -526,7 +629,7 @@ const Footer = () => {
       const elementPosition = element.offsetTop;
       window.scrollTo({
         top: elementPosition - offset,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -535,19 +638,44 @@ const Footer = () => {
     <footer className="bg-foreground py-12 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
-          <div className="font-playfair text-3xl font-bold text-primary mb-4">HeArt Lightz</div>
-          <p className="text-white/80 mb-6">Media for dreamers. Stories for a new way of living.</p>
-          
+          <div className="font-playfair text-3xl font-bold text-primary mb-4">
+            HeArt Lightz
+          </div>
+          <p className="text-white/80 mb-6">
+            Media for dreamers. Stories for a new way of living.
+          </p>
+
           <div className="flex justify-center space-x-6 mb-8">
-            <button onClick={() => scrollToSection('about')} className="underline-glow text-white/80 hover:text-white transition-colors">About</button>
-            <button onClick={() => scrollToSection('work')} className="underline-glow text-white/80 hover:text-white transition-colors">Work</button>
-            <button onClick={() => scrollToSection('movement')} className="underline-glow text-white/80 hover:text-white transition-colors">Movement</button>
-            <button onClick={() => scrollToSection('contact')} className="underline-glow text-white/80 hover:text-white transition-colors">Contact</button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="underline-glow text-white/80 hover:text-white transition-colors"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("work")}
+              className="underline-glow text-white/80 hover:text-white transition-colors"
+            >
+              Work
+            </button>
+            <button
+              onClick={() => scrollToSection("movement")}
+              className="underline-glow text-white/80 hover:text-white transition-colors"
+            >
+              Movement
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="underline-glow text-white/80 hover:text-white transition-colors"
+            >
+              Contact
+            </button>
           </div>
 
           <div className="border-t border-white/20 pt-8">
             <p className="text-white/60 text-sm">
-              © 2024 HeArt Lightz. All rights reserved. | Things don't have to be this way.
+              © 2025 HeArt Lightz. All rights reserved. | Things don't have to
+              be this way.
             </p>
           </div>
         </div>
