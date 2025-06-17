@@ -1,0 +1,35 @@
+Create a responsive one-page website for a media production brand called HeArt Lightz. The brand is bold, artistic, heart-centered, and mission-driven. The visual aesthetic should be sleek and minimal with warmth — use a palette of deep red (#8B1E3F), soft cream (#F9F4EF), and cool grey (#4A4A4A). Add subtle motion or hover effects that feel fluid and creative (like soft fades, underline glows, or slow reveals).
+
+Website Sections to Include:
+   
+ 1    Hero Section
+    ◦    Bold logo or wordmark
+    ◦    Tagline: “Media for dreamers. Stories for a new way of living.”
+    ◦    Background: subtle animated gradient or video loop (optional)
+    ◦    Call-to-action button: “Watch the Journey” or “Start Here”
+    
+2    About HeArt Lightz
+    ◦    Short version of the mission:
+“We create bold, heart-led media that challenges the status quo and lights the way toward a more connected, inspired future.”
+
+    ◦    Highlight 3 brand values: Connection. Creativity. Rebellion with heart.
+    ◦    Use warm typography and visual separators (e.g. cream lines or icons)
+    
+3    Featured Work
+    ◦    Embedded or linked teaser video or Reel
+    ◦    Short writeup: “From the U.S. to Brazil — documenting the beauty of living differently.”
+    
+4    Join the Movement
+    ◦    Newsletter signup (embed Substack or placeholder)
+    ◦    Patreon or “Support the Vision” link
+    ◦    Social media buttons (Instagram, TikTok, YouTube)
+   
+5    Contact / Collab
+    ◦    Contact form with name, email, message
+    ◦    Text: “Let’s build something beautiful. We love collaborations.”
+
+Design Notes:
+    •    Font style: Choose a modern serif or artistic sans-serif that feels expressive (like Playfair Display, DM Serif, or Syne)
+    •    Layout: One scrollable page with smooth transitions
+    •    Feel: Honest, elevated, rebellious yet welcoming — like a creative manifesto you can walk through
+    •    Optional: Include quotes from the brand (e.g. “Things don’t have to be this way. We’re here to prove it.”)
