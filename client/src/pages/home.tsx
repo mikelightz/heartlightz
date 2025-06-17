@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation, queryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { Heart, Palette, Flame, Video, Globe, Users, Instagram, Youtube, ChevronDown, Menu, X, ExternalLink, Play } from "lucide-react";
 import { FaTiktok, FaPatreon } from "react-icons/fa";
@@ -54,16 +54,16 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('about')} className="underline-glow font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('about')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
               About
             </button>
-            <button onClick={() => scrollToSection('work')} className="underline-glow font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('work')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
               Work
             </button>
-            <button onClick={() => scrollToSection('movement')} className="underline-glow font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('movement')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
               Movement
             </button>
-            <button onClick={() => scrollToSection('contact')} className="underline-glow font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('contact')} className="underline-glow font-medium text-background hover:text-primary transition-colors">
               Contact
             </button>
           </div>
@@ -85,16 +85,16 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden mt-4 space-y-4 border-t border-border pt-4"
           >
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('about')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
               About
             </button>
-            <button onClick={() => scrollToSection('work')} className="block w-full text-left font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('work')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
               Work
             </button>
-            <button onClick={() => scrollToSection('movement')} className="block w-full text-left font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('movement')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
               Movement
             </button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left font-medium hover:text-primary transition-colors">
+            <button onClick={() => scrollToSection('contact')} className="block w-full text-left font-medium text-background hover:text-primary transition-colors">
               Contact
             </button>
           </motion.div>
@@ -134,7 +134,7 @@ const HeroSection = () => {
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full md:w-auto">
             Watch the Journey
           </Button>
-          <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full md:w-auto">
+          <Button variant="outline" size="lg" className="border-2 border-white text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full md:w-auto">
             Start Here
           </Button>
         </motion.div>
