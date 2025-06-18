@@ -75,9 +75,9 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-grey) 50%, var(--brand-cream) 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
+    background: radial-gradient(circle at center, var(--brand-red) 0%, var(--brand-grey) 40%, var(--brand-cream) 100%);
+    background-size: 300% 300%;
+    animation: heartPulse 4s ease-in-out infinite;
   }
 
   .underline-glow {
@@ -112,8 +112,17 @@
   }
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@keyframes heartPulse {
+  0% { 
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+  50% { 
+    background-size: 120% 120%;
+    background-position: center center;
+  }
+  100% { 
+    background-size: 100% 100%;
+    background-position: center center;
+  }
 }
