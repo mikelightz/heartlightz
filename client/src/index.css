@@ -4,31 +4,31 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(40, 100%, 98%);
-  --foreground: hsl(205, 8%, 57%);
-  --muted: hsl(40, 100%, 96%);
-  --muted-foreground: hsl(205, 8%, 50%);
-  --popover: hsl(40, 100%, 98%);
-  --popover-foreground: hsl(205, 8%, 57%);
+  --background: hsl(50, 100%, 99%);
+  --foreground: hsl(43, 3%, 39%);
+  --muted: hsl(50, 100%, 97%);
+  --muted-foreground: hsl(43, 3%, 35%);
+  --popover: hsl(50, 100%, 99%);
+  --popover-foreground: hsl(43, 3%, 39%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(205, 8%, 57%);
-  --border: hsl(40, 20%, 90%);
-  --input: hsl(40, 20%, 90%);
+  --card-foreground: hsl(43, 3%, 39%);
+  --border: hsl(50, 20%, 90%);
+  --input: hsl(50, 20%, 90%);
   --primary: hsl(0, 100%, 34%);
-  --primary-foreground: hsl(40, 100%, 98%);
-  --secondary: hsl(40, 100%, 96%);
-  --secondary-foreground: hsl(205, 8%, 57%);
-  --accent: hsl(40, 100%, 96%);
-  --accent-foreground: hsl(205, 8%, 57%);
+  --primary-foreground: hsl(50, 100%, 99%);
+  --secondary: hsl(50, 100%, 97%);
+  --secondary-foreground: hsl(43, 3%, 39%);
+  --accent: hsl(50, 100%, 97%);
+  --accent-foreground: hsl(43, 3%, 39%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(205, 8%, 57%);
+  --ring: hsl(43, 3%, 39%);
   --radius: 0.5rem;
   
   /* Brand Colors */
   --brand-red: hsl(0, 100%, 34%);
-  --brand-cream: hsl(40, 100%, 98%);
-  --brand-grey: hsl(205, 8%, 57%);
+  --brand-cream: hsl(50, 100%, 99%);
+  --brand-grey: hsl(43, 3%, 39%);
 }
 
 .dark {
@@ -77,7 +77,7 @@
   .hero-gradient {
     background: radial-gradient(circle at center, var(--brand-red) 0%, var(--brand-grey) 40%, var(--brand-cream) 100%);
     background-size: 300% 300%;
-    animation: heartPulse 4s ease-in-out infinite;
+    animation: heartPulse 8s ease-in-out infinite;
   }
 
   .underline-glow {
@@ -114,15 +114,15 @@
 
 @keyframes heartPulse {
   0% { 
-    background-size: 150% 150%;
+    background-size: 100% 100%;
     background-position: center center;
   }
   50% { 
-    background-size: 200% 200%;
+    background-size: 400% 400%;
     background-position: center center;
   }
   100% { 
-    background-size: 150% 150%;
+    background-size: 100% 100%;
     background-position: center center;
   }
 }
