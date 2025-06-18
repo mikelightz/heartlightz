@@ -523,11 +523,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Collaboration Inquiry");
-    const body = encodeURIComponent(
-      `Hi HeArt Lightz,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nBest regards,\n${formData.name}`
-    );
-    window.open(`mailto:heartlightzstudio@gmail.com?subject=${subject}&body=${body}`, '_self');
+    contactMutation.mutate(formData);
   };
 
   const handleChange = (
@@ -615,8 +611,9 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-lg font-semibold"
+                  disabled={contactMutation.isPending}
                 >
-                  Send Message
+                  {contactMutation.isPending ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
