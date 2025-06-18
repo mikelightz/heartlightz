@@ -75,7 +75,7 @@
   }
 
   .hero-gradient {
-    background: radial-gradient(circle at center, var(--brand-red) 0%, var(--brand-grey) 40%, var(--brand-cream) 100%);
+    background: radial-gradient(circle at center, var(--brand-red) 0%, var(--brand-cream) 100%);
     background-size: 300% 300%;
     animation: heartPulse 8s ease-in-out infinite;
   }

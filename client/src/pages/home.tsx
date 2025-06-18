@@ -78,25 +78,25 @@ const Navigation = () => {
           <div className="hidden md:flex space-x-8">
             <button
               onClick={() => scrollToSection("about")}
-              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+              className="underline-glow font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("work")}
-              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+              className="underline-glow font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
             >
               Work
             </button>
             <button
               onClick={() => scrollToSection("movement")}
-              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+              className="underline-glow font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
             >
               Movement
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="underline-glow font-medium text-background hover:text-primary transition-colors"
+              className="underline-glow font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
             >
               Contact
             </button>
@@ -123,25 +123,25 @@ const Navigation = () => {
             >
               <button
                 onClick={() => scrollToSection("about")}
-                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+                className="block w-full text-left font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("work")}
-                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+                className="block w-full text-left font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
               >
                 Work
               </button>
               <button
                 onClick={() => scrollToSection("movement")}
-                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+                className="block w-full text-left font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
               >
                 Movement
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full text-left font-medium text-background hover:text-primary transition-colors"
+                className="block w-full text-left font-medium text-white drop-shadow-lg hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-white/10"
               >
                 Contact
               </button>
