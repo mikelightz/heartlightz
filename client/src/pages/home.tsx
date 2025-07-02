@@ -185,7 +185,11 @@ const HeroSection = () => {
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full md:w-auto"
             asChild
           >
-            <a href="https://www.youtube.com/channel/UCy8iKnUUfg3cYQhH07ambug" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.youtube.com/channel/UCy8iKnUUfg3cYQhH07ambug"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Watch the Journey
             </a>
           </Button>
@@ -299,24 +303,33 @@ const FeaturedWorkSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-              <img
-                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=675"
-                alt="Film production setup with camera equipment"
-                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-              />
-
-              <div
-                className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer hover:bg-black/50 transition-colors duration-300"
-                onClick={() => setIsVideoPlaying(true)}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-20 h-20 bg-primary rounded-full flex items-center justify-center"
-                >
-                  <Play className="h-8 w-8 text-white ml-1" />
-                </motion.div>
-              </div>
+              {isVideoPlaying ? (
+                <div className="aspect-w-16 aspect-h-9 w-full">
+                  <iframe
+                    src="https://youtu.be/BqiIXMP6jg4?si=hkmqY2PAblYFpJYm?autoplay=1"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full"
+                    title="YouTube video player"
+                  ></iframe>
+                </div>
+              ) : (
+                <>
+                  <div
+                    className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer hover:bg-black/50 transition-colors duration-300"
+                    onClick={() => setIsVideoPlaying(true)}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-20 h-20 bg-primary rounded-full flex items-center justify-center"
+                    >
+                      <Play className="h-8 w-8 text-white ml-1" />
+                    </motion.div>
+                  </div>
+                </>
+              )}
             </div>
           </AnimatedSection>
 
@@ -527,7 +540,7 @@ const ContactSection = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData((prev) => ({
       ...prev,
