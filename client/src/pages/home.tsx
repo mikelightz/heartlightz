@@ -645,7 +645,7 @@ const Footer = () => {
             HeArt Lightz
           </div>
           <p className="text-white/80 mb-6">
-            Media for dreamers. Stories for a new way of living.
+            Media for seekers. Stories for a new way of living.
           </p>
 
           <div className="flex justify-center space-x-6 mb-8">
