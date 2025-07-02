@@ -288,7 +288,7 @@ const AboutSection = () => {
 };
 
 const FeaturedWorkSection = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
     <section id="work" className="py-20 bg-secondary">
