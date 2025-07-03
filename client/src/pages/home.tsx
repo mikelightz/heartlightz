@@ -306,7 +306,7 @@ const FeaturedWorkSection = () => {
               {isVideoPlaying ? (
                 <div className="aspect-w-16 aspect-h-9 w-full">
                   <iframe
-                    src="https://www.youtube.com/embed/BqiIXMP6jg4?si=czuIckM-nNmVtvlQ"
+                    src="https://www.youtube.com/embed/BqiIXMP6jg4"
                     frameBorder="0"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
