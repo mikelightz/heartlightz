@@ -198,6 +198,7 @@ const HeroSection = () => {
             size="lg"
             className="border-2 border-white text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full md:w-auto"
           >
+            <a href="#about"></a>
             Start Here
           </Button>
         </motion.div>
@@ -445,7 +446,7 @@ const JoinMovementSection = () => {
 
                 <div className="space-y-4 mb-6">
                   <a
-                    href="#"
+                    href="patreon.com/HeArtLightz"
                     className="flex items-center justify-between bg-card p-4 rounded-lg hover:shadow-md transition-shadow duration-300 underline-glow"
                   >
                     <div className="flex items-center">
@@ -470,7 +471,7 @@ const JoinMovementSection = () => {
                     <FaTiktok className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://www.youtube.com/channel/UCy8iKnUUfg3cYQhH07ambug"
+                    href="https://www.youtube.com/@HeArtLightz"
                     className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors duration-300"
                   >
                     <Youtube className="h-5 w-5" />
