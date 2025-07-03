@@ -316,11 +316,10 @@ const FeaturedWorkSection = () => {
                 </div>
               ) : (
                 <>
-                  {/*
                   <div
                     className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer hover:bg-black/50 transition-colors duration-300"
                     onClick={() => setIsVideoPlaying(true)}
-                  > 
+                  >
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -329,7 +328,6 @@ const FeaturedWorkSection = () => {
                       <Play className="h-8 w-8 text-white ml-1" />
                     </motion.div>
                   </div>
-                  */}
                 </>
               )}
             </div>
