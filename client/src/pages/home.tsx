@@ -193,14 +193,16 @@ const HeroSection = () => {
               Watch the Journey
             </a>
           </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-2 border-white text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full md:w-auto"
-          >
-            <a href="#about"></a>
-            Start Here
-          </Button>
+
+          <a href="#about">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 border-white text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 w-full md:w-auto"
+            >
+              Start Here
+            </Button>
+          </a>
         </motion.div>
       </div>
 
@@ -446,7 +448,7 @@ const JoinMovementSection = () => {
 
                 <div className="space-y-4 mb-6">
                   <a
-                    href="patreon.com/HeArtLightz"
+                    href="https://www.patreon.com/HeArtLightz"
                     className="flex items-center justify-between bg-card p-4 rounded-lg hover:shadow-md transition-shadow duration-300 underline-glow"
                   >
                     <div className="flex items-center">
