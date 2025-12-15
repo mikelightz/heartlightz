@@ -63,7 +63,7 @@ export default function LinkHub() {
             alt="Profile"
             className="w-24 h-24 mx-auto rounded-full border-2 border-white/10 shadow-xl object-cover mb-4"
           />
-          <h1 className="text-2xl font-bold tracking-tight">Your Name</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Mike Lightz</h1>
           <p className="text-neutral-400 text-sm mt-1">
             Producer | Editor | Visuals
           </p>
