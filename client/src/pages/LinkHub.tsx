@@ -59,7 +59,7 @@ export default function LinkHub() {
         <div className="mb-8 text-center">
           {/* Make sure this image exists in your /public folder! */}
           <img
-            src="/public/avi.jpg"
+            src="/avi.JPG"
             alt="Profile"
             className="w-24 h-24 mx-auto rounded-full border-2 border-white/10 shadow-xl object-cover mb-4"
           />
