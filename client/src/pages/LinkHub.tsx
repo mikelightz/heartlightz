@@ -38,8 +38,12 @@ const links: LinkItem[] = [
 
 const socials: SocialItem[] = [
   { name: "TikTok", url: "#", icon: "TT" },
-  { name: "Instagram", url: "#", icon: "IG" },
-  { name: "YouTube", url: "#", icon: "YT" },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/mikelightz/",
+    icon: "IG",
+  },
+  { name: "YouTube", url: "https://www.youtube.com/@HeArtLightz", icon: "YT" },
 ];
 
 export default function LinkHub() {
@@ -63,7 +67,9 @@ export default function LinkHub() {
             alt="Profile"
             className="w-24 h-24 mx-auto rounded-full border-2 border-white/10 shadow-xl object-cover mb-4"
           />
-          <h1 className="text-2xl font-bold tracking-tight">Mike Lightz</h1>
+          <h1 className="text-2xl font-bold tracking-tight">
+            HeArt by Mike Lightz
+          </h1>
           <p className="text-neutral-400 text-sm mt-1">
             Producer | Editor | Visuals
           </p>
