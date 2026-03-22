@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-red-dark: #94150D;
+  --color-brand-beige-light: #FCDFB9;
+  --color-brand-red-bright: #BB2417;
+  --color-brand-rose: #C98A86;
+  --color-brand-beige-warm: #F0CCAA;
+
+  --color-background-dark: #0a0a0a;
+  --color-background-card: #141414;
+
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted: #525252;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-background-dark);
+    color: var(--color-brand-beige-light);
+  }
+
+  body {
+    @apply antialiased min-h-screen overflow-x-hidden selection:bg-brand-red-bright selection:text-white;
+    background-color: var(--color-background-dark);
+    background-image: 
+      linear-gradient(rgba(148, 21, 13, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 21, 13, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@layer components {
+
+  /* Stars Background - 2000s Style */
+  .bg-stars {
+    min-height: 100vh;
+    background-color: var(--color-background-dark);
+    background-image:
+      radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 2px),
+      radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 1px),
+      radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 2px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+  }
+
+  /* 2000s Beveled Button */
+  .btn-primary {
+    @apply px-6 py-2 bg-brand-red-dark text-white font-bold tracking-widest uppercase text-sm cursor-pointer;
+    border: 6px outset var(--color-brand-red-bright);
+    /* Classic Bevel Effect */
+  }
+
+  .btn-primary:active {
+    border-style: inset;
+  }
+
+  .btn-outline {
+    @apply px-6 py-2 bg-black text-brand-beige-light font-bold tracking-wide uppercase text-sm cursor-pointer;
+    border: 6px outset var(--color-brand-beige-light);
+  }
+
+  .btn-outline:active {
+    border-style: inset;
+  }
+
+  /* 90s Frame Borders */
+  .frame-outset {
+    border: 8px outset var(--color-brand-red-dark);
+  }
+  
+  .frame-inset {
+    border: 8px inset var(--color-brand-red-dark);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Make Scrollbar Retro Blocky */
+  ::-webkit-scrollbar {
+    width: 24px;
+    height: 24px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border: 4px inset var(--color-brand-red-dark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-red-dark);
+    border: 4px outset var(--color-brand-red-bright);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    border-style: inset;
+  }
+  ::-webkit-scrollbar-corner {
+    background: #0a0a0a;
+  }
+
+  .glass-panel {
+    @apply bg-background-card border-2 border-brand-red-dark;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-beige-light to-brand-rose;
+  }
+
+  /* Classic 2000s Title 3D Effect */
+  .text-3d {
+    color: var(--color-brand-beige-light);
+    text-shadow:
+      1px 1px 0 #94150D,
+      2px 2px 0 #94150D,
+      3px 3px 0 #94150D,
+      4px 4px 0 #94150D,
+      5px 5px 0 #5a0c07;
+  }
+
+  .text-3d-lg {
+    color: var(--color-brand-beige-light);
+    text-shadow:
+      1px 1px 0 #94150D,
+      2px 2px 0 #94150D,
+      3px 3px 0 #94150D,
+      4px 4px 0 #5a0c07;
+  }
+
+  .text-3d-md {
+    color: var(--color-brand-beige-light);
+    text-shadow:
+      1px 1px 0 #94150D,
+      2px 2px 0 #94150D,
+      3px 3px 0 #5a0c07;
+  }
+
+  .text-3d-sm {
+    color: var(--color-brand-beige-light);
+    text-shadow:
+      1px 1px 0 #94150D,
+      2px 2px 0 #5a0c07;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
