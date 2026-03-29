@@ -60,9 +60,21 @@ const Navbar = () => {
           ))}
           <hr className="border-[3px] [border-style:ridge] border-[#94150D] my-2 w-full" />
           
-          <a href="#subscribe" onClick={() => setIsMenuOpen(false)} className="btn-primary mt-4 mb-8 text-center shadow-[4px_4px_0px_#000] active:shadow-[1px_1px_0px_#000]">
-            Commence
-          </a>
+          <div className="flex flex-col gap-4 mt-2">
+            <a
+              href="https://heartlightz-tuner.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full py-3 px-4 border-[4px] [border-style:outset] hover:[border-style:inset] font-bold tracking-widest uppercase text-center transition-none shadow-[2px_2px_0px_#000] bg-[#311042] border-[#F59E0B] hover:bg-[#8B5CF6] text-[#FCD34D] hover:text-white"
+            >
+              Solfeggio Tuner
+            </a>
+
+            <a href="#subscribe" onClick={() => setIsMenuOpen(false)} className="btn-primary mb-8 text-center shadow-[4px_4px_0px_#000] active:shadow-[1px_1px_0px_#000]">
+              Commence
+            </a>
+          </div>
         </nav>
       </aside>
     </>
