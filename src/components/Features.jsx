@@ -11,21 +11,21 @@ const Features = () => {
     }, []);
     const cards = [
         {
-            title: "Diagnostic Shuffler",
+            title: "Custom Gigs",
             description: "Algorithms tracking internal rhythms to output corresponding ambient structures.",
             icon: <Activity className="w-8 h-8 text-[#94150D]" />,
             color: "border-[#94150D]",
             link: "https://www.fiverr.com/medwjr?source=gig_page"
         },
         {
-            title: "Telemetry Typewriter",
+            title: "Typewriter",
             description: "Direct signals translated into mindful reflections and actionable sonic therapies.",
             icon: <Zap className="w-8 h-8 text-[#FCDFB9]" />,
             color: "border-[#FCDFB9]",
             link: "https://heartlightz.substack.com/"
         },
         {
-            title: "Cursor Scheduler",
+            title: "1 : on : 1 Sessions",
             description: "Rhythmic synchronization sessions booked immediately into your neural calendar.",
             icon: <RadioReceiver className="w-8 h-8 text-[#BB2417]" />,
             color: "border-[#BB2417]",
@@ -44,7 +44,9 @@ const Features = () => {
                         System Modules
                     </h2>
                     <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-bold max-w-2xl leading-tight">
-                        Advanced Tooling for <span className="text-[#94150D] text-3d-md">Mental Architecture</span>.
+                        Fresh Tools for
+                        <br />
+                        <span className="text-[#94150D] text-3d-md">Mental Wellness</span>.
                     </h3>
                 </div>
 
@@ -52,7 +54,7 @@ const Features = () => {
                     {cards.map((card, index) => {
                         const isCalTrigger = !!card.calLink;
                         const CardWrapper = card.link ? 'a' : (isCalTrigger ? 'button' : 'div');
-                        
+
                         let wrapperProps = {};
                         if (card.link) {
                             wrapperProps = { href: card.link, target: "_blank", rel: "noopener noreferrer" };

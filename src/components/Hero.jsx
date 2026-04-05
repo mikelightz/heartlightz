@@ -61,13 +61,12 @@ const Hero = () => {
 
                 {/* Massive Typography */}
                 <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight text-white leading-[0.9] mb-4 overflow-hidden">
-                    <span ref={title1Ref} className="block text-[#F0CCAA] text-3d mb-2">Sonic Wellness</span>
-                    <span ref={title2Ref} className="block italic text-[#94150D] text-3d drop-shadow-[0_0_15px_rgba(201,138,134,0.4)]">From the Heart.</span>
+                    <span ref={title1Ref} className="block text-[#F0CCAA] text-3d mb-2">Harmonics N Harmony</span>
+                    {/*<span ref={title2Ref} className="block italic text-[#94150D] text-3d drop-shadow-[0_0_15px_rgba(201,138,134,0.4)]">Everything from the Heart.</span> */}
                 </h1>
 
                 <p ref={textRef} className="mt-8 max-w-2xl text-white text-lg md:text-xl font-bold tracking-wide leading-relaxed bg-black/80 p-6 border-[4px] border-[#94150D] [border-style:inset] shadow-[inset_0_0_10px_rgba(0,0,0,0.8)]">
                     Meditative sound designs, exploration in art healing, connection, and authenticity.
-                    Step into the Midnight Luxe clinical suite.
                 </p>
 
                 <div className="mt-12 flex flex-col sm:flex-row gap-6">
