@@ -18,7 +18,7 @@ const Features = () => {
             link: "https://www.fiverr.com/medwjr?source=gig_page"
         },
         {
-            title: "Typewriter",
+            title: "Journal",
             description: "Direct signals translated into mindful reflections and actionable sonic therapies.",
             icon: <Zap className="w-8 h-8 text-[#FCDFB9]" />,
             color: "border-[#FCDFB9]",
