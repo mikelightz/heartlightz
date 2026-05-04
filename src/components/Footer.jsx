@@ -1,6 +1,6 @@
 import { Heart } from 'lucide-react';
 
-const Footer = () => {
+const Footer = ({ setCurrentPage }) => {
     return (
         <footer className="bg-black border-t-[6px] border-[#94150D] [border-top-style:outset] py-16 md:py-24 relative overflow-hidden">
             <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -28,6 +28,11 @@ const Footer = () => {
                                     </a>
                                 </li>
                             ))}
+                            <li>
+                                <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('tos'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-[#525252] hover:text-[#C98A86] text-sm transition-colors duration-300">
+                                    Terms of Service
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
