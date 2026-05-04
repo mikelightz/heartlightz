@@ -61,7 +61,7 @@ const mockData = [
   }
 ];
 
-const categories = ['All', 'Remixes & Mashups', 'Beats', 'Meditations'];
+const categories = ['All', 'Remixes & Mashups', 'Beats', 'Meditations', 'Sample Packs'];
 
 const Shop = () => {
   const [activeCategory, setActiveCategory] = useState('All');
