@@ -15,7 +15,7 @@ const mockData = [
     ],
     imageUrl: '/images/music/gameboy_cover.png',
     audioUrl: '/audio/gameboy_audio.mp3',
-    downloadUrl: 'https://heartlightz.lemonsqueezy.com/checkout/buy/1a1f1953-4545-4cce-a235-cdf9e49d3588'
+    downloadUrl: 'https://heartlightz.lemonsqueezy.com/checkout/buy/3481c4b0-ea8f-431d-8173-189750136617'
   },
   /*{
     id: 2,
@@ -57,7 +57,7 @@ const mockData = [
     ],
     imageUrl: '/images/music/pinkyup_cover.png',
     audioUrl: '/audio/pinkyup_audio.mp3',
-    downloadUrl: 'https://heartlightz.lemonsqueezy.com/checkout/buy/c0e3ef31-588f-49b0-ba70-b83d28ac5d08'
+    downloadUrl: 'https://heartlightz.lemonsqueezy.com/checkout/buy/2e204ed8-f76f-4de8-bf77-ea43cc4be508'
   }
 ];
 
