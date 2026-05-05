@@ -9,6 +9,8 @@ import Subscribe from './components/Subscribe';
 import Footer from './components/Footer';
 import Shop from './components/Shop';
 import TermsOfService from './components/TermsOfService';
+import Licensing from './components/Licensing';
+import About from './components/About';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -64,6 +66,10 @@ function App() {
           </>
         ) : currentPage === 'shop' ? (
           <Shop />
+        ) : currentPage === 'licensing' ? (
+          <Licensing setCurrentPage={setCurrentPage} />
+        ) : currentPage === 'about' ? (
+          <About />
         ) : currentPage === 'tos' ? (
           <TermsOfService />
         ) : null}

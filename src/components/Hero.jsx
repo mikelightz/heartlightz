@@ -61,7 +61,7 @@ const Hero = () => {
 
                 {/* Massive Typography */}
                 <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight text-white leading-[0.9] mb-4 overflow-hidden">
-                    <span ref={title1Ref} className="block text-[#F0CCAA] text-3d mb-2">Beats By HeArt</span>
+                    <span ref={title1Ref} className="block text-[#F0CCAA] text-3d mb-6">Beats By HeArt</span>
                     {/*<span ref={title2Ref} className="block italic text-[#94150D] text-3d drop-shadow-[0_0_15px_rgba(201,138,134,0.4)]">Everything from the Heart.</span> */}
                 </h1>
 

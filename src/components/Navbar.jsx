@@ -10,6 +10,8 @@ const Navbar = ({ setCurrentPage, currentPage }) => {
     { name: 'Meditations', href: 'https://www.youtube.com/@444FREQUENCIES', external: true },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Protocol', href: '#protocol' },
+    { name: 'Licensing', action: () => { setCurrentPage('licensing'); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
+    { name: 'About', action: () => { setCurrentPage('about'); window.scrollTo({ top: 0, behavior: 'smooth' }); } },
     { name: 'Subscribe', href: '#subscribe' }
   ];
 
@@ -48,7 +50,7 @@ const Navbar = ({ setCurrentPage, currentPage }) => {
         <a href="#" onClick={handleLogoClick} className="hidden md:flex flex-col items-center mt-12 mb-12 gap-4 px-4 hover:opacity-80 transition-opacity">
           <Heart className="w-12 h-12 text-[#94150D]" />
           <div className="font-serif text-3xl font-bold tracking-wider text-3d text-center leading-tight">
-            HeArt<br/>Lightz
+            HeArt<br />Lightz
           </div>
         </a>
 
@@ -76,7 +78,7 @@ const Navbar = ({ setCurrentPage, currentPage }) => {
             );
           })}
           <hr className="border-[3px] [border-style:ridge] border-[#94150D] my-2 w-full" />
-          
+
           <div className="flex flex-col gap-4 mt-2">
             <a
               href="https://heartlightz-tuner.netlify.app"
